@@ -23,7 +23,7 @@ bp
 # alpha参数可以调整颜色的透明度，范围0-1
 barp <- ggplot(mydata3, aes(x=Site.Name, y=ODO.mg.L))+geom_bar(stat="identity", alpha=0.5)
 barp
-# 散点图可升级为气泡，fill=和size=设定填充色和大小随数据改变，stroke=可调整轮廓线条的粗细
+# 散点图可转换为气泡图，fill=和size=设定填充色和大小随数据改变，stroke=可调整轮廓线条的粗细
 qp <- ggplot(mydata3, aes(x=Site.Name, y=ODO.mg.L, fill=ODO.mg.L, size=ODO.mg.L))+
   geom_point(shape=21, colour="black", stroke=0.25, alpha=0.8)
 qp
