@@ -23,7 +23,7 @@ df_gather
 df_spread <- tidyr::spread(df_gather, year, value)
 df_spread
 
-# (2) 变量的变换，对原列进行计算并生成新列，用dplyr包里的mutate()函数
+# (2) 变量的变换，对原列进行计算并生成新列，用dplyr包里的mutate()函数；关于diplyr包更详细的介绍，可看《R语言实战》的3.11节
 library(dplyr)
 data1 <- dplyr::mutate(df_gather, value2=value*2)
 data1
