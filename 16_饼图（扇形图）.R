@@ -39,9 +39,9 @@ df                                 #desc()函数是dplyr包中的一个函数，
 df$color<-rev(brewer.pal(nrow(df), "Blues"))
 df
 
-df<-df[c(2:nrow(df),1),]           #c(2:nrow(df), 1) 表示一个索引向量，
-df                                 #该索引向量的内容是从第二行到最后一行的索引值（2:nrow(df)），以及第一行的索引值（1）
-                                   #作用是将数据框df的第一行移动到了最后，而其他行移到前头且顺序保持不变
+df<-df[c(2:nrow(df),1),]           #c(2:nrow(df), 1) 是一个索引向量，2:nrow(df)表示第2行到最后一行，
+df                                 #c(2:nrow(df),1)表示从第二行到最后一行、以及第一行
+                                   #df[c(2:nrow(df),1),]作用是改变行顺序，列顺序不变，将数据框df的第一行移动到了最后，而其他行(第2行到最后一行)不变顺序地移到前头
 
 labs <- paste0(df$group," \n(", round(df$value/sum(df$value)*100,2), "%)")
 
