@@ -11,6 +11,6 @@ days
 format(today, format='%A')
 format(birthday, format='%A')
 
-# 作者出生在周几？
+# 《R语言实战》的作者出生在周几？
 author_birth <- as.Date('1956-10-12')
 format(author_birth, format='%A')
